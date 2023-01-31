@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="Nutracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FoodBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hTV-YE-pdo">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lx4-P9-UtL">
+                                <rect key="frame" x="15" y="321" width="360" height="489"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="489" id="qIF-f4-nKf"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" editingAccessoryType="disclosureIndicator" id="7Lm-R3-eQg" userLabel="Search Cell">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="360" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Lm-R3-eQg" id="zHc-Id-3BP">
+                                            <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MNN-TL-aAR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="idm-IC-izV"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for foods" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ECJ-jS-scE">
+                                <rect key="frame" x="15" y="281" width="360" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ULQ-O7-HBR"/>
+                                </connections>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-r8-niP">
+                                <rect key="frame" x="35" y="256.33333333333331" width="325" height="19.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only Show Foundation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeK-u2-lon" userLabel="only show foundation">
+                                        <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="19.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                        <color key="textColor" name="FoundationColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Include Branded Foods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx0-7J-Hwc" userLabel="include brand foods">
+                                        <rect key="frame" x="178.66666666666663" y="0.0" width="146.33333333333337" height="19.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                        <color key="textColor" name="BrandedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="P6i-Bq-xcG">
+                                <rect key="frame" x="95" y="229.33333333333334" width="200" height="25"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvt-Wc-MMY">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="2sr-1T-ihZ"/>
+                                            <constraint firstAttribute="height" constant="25" id="gLO-sq-A0c"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="square" catalog="system" cornerStyle="large">
+                                            <backgroundConfiguration key="background"/>
+                                            <color key="baseBackgroundColor" name="TitleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="foundationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1zS-cc-YZ4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opg-pH-qol">
+                                        <rect key="frame" x="175" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="QkM-vP-eJZ"/>
+                                            <constraint firstAttribute="height" constant="25" id="Zqg-6p-0pa"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="square" catalog="system" cornerStyle="large">
+                                            <backgroundConfiguration key="background"/>
+                                            <color key="baseBackgroundColor" name="TitleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="brandButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ko8-SM-U32"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Your Foods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YR-sd-awl">
+                                <rect key="frame" x="17.333333333333343" y="129" width="355.66666666666663" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="55"/>
+                                <color key="textColor" red="0.76499998569488525" green="0.32597396981023702" blue="0.00014707295833205934" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Cee-Co-vqg">
+                                <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="P6i-Bq-xcG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3TS-ib-DYo"/>
+                            <constraint firstItem="Cee-Co-vqg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4f0-u8-DhX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ECJ-jS-scE" secondAttribute="trailing" constant="15" id="A1g-zl-TPx"/>
+                            <constraint firstItem="Lx4-P9-UtL" firstAttribute="top" secondItem="ECJ-jS-scE" secondAttribute="bottom" id="A9v-oT-2CZ"/>
+                            <constraint firstItem="9YR-sd-awl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B03-PV-LBC"/>
+                            <constraint firstItem="Lx4-P9-UtL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Cfc-x3-YTt"/>
+                            <constraint firstItem="rz9-r8-niP" firstAttribute="top" secondItem="P6i-Bq-xcG" secondAttribute="bottom" constant="2" id="ISC-5b-QFs"/>
+                            <constraint firstItem="ECJ-jS-scE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="MiG-uH-b8O"/>
+                            <constraint firstItem="hTV-YE-pdo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="P2b-0N-A8g"/>
+                            <constraint firstAttribute="bottom" secondItem="hTV-YE-pdo" secondAttribute="bottom" id="YKP-dJ-LYD"/>
+                            <constraint firstAttribute="trailing" secondItem="hTV-YE-pdo" secondAttribute="trailing" id="bkN-DM-3WK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rz9-r8-niP" secondAttribute="trailing" constant="30" id="csv-17-7dG"/>
+                            <constraint firstItem="9YR-sd-awl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="ev0-xM-nm4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lx4-P9-UtL" secondAttribute="trailing" constant="15" id="fKh-ko-WtR"/>
+                            <constraint firstItem="Cee-Co-vqg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="htu-bj-293"/>
+                            <constraint firstItem="Lx4-P9-UtL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ipA-0O-M96"/>
+                            <constraint firstItem="rz9-r8-niP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="puc-JB-R2G"/>
+                            <constraint firstItem="ECJ-jS-scE" firstAttribute="top" secondItem="rz9-r8-niP" secondAttribute="bottom" constant="5" id="ryw-Yf-aKB"/>
+                            <constraint firstItem="hTV-YE-pdo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x6N-Qz-DV9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Cee-Co-vqg" id="9Ws-mT-RfN"/>
+                        <outlet property="brandButton" destination="opg-pH-qol" id="tIg-HG-lK5"/>
+                        <outlet property="foundationButton" destination="Pvt-Wc-MMY" id="fXR-FH-jMb"/>
+                        <outlet property="searchTextfield" destination="ECJ-jS-scE" id="cYA-fk-mQC"/>
+                        <outlet property="tableView" destination="Lx4-P9-UtL" id="gnm-J7-7Wc"/>
+                        <segue destination="AcZ-8h-CDk" kind="showDetail" identifier="goToFacts" id="95I-ee-pb1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.846153846153847" y="67.535545023696685"/>
+        </scene>
+        <!--Facts View Controller-->
+        <scene sceneID="5Vk-fv-psE">
+            <objects>
+                <viewController title="Facts View Controller" id="AcZ-8h-CDk" userLabel="Facts View Controller" customClass="FactsViewController" customModule="Nutracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KLW-IJ-oZr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FactsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gfo-P8-FIl">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Wc0-Jd-48b">
+                                <rect key="frame" x="176.66666666666666" y="376.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-Ef-qRK">
+                                <rect key="frame" x="31.333333333333343" y="44" width="327.33333333333326" height="65"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.86387310606060608" blue="0.80279070369479677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-VG-383">
+                                <rect key="frame" x="20" y="114" width="350" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" name="NameColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(type)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lG-FK-XRG">
+                                <rect key="frame" x="176.66666666666666" y="153" width="37" height="16.333333333333343"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <color key="textColor" name="NameColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXt-Mt-OqU">
+                                <rect key="frame" x="5" y="174" width="380" height="592"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="edU-Xz-K36">
+                                        <rect key="frame" x="20" y="20" width="340" height="439.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3iD-wj-6tt">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="439.33333333333331"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo3-dz-nPK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="32.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u23-k6-nfI">
+                                                        <rect key="frame" x="0.0" y="40.666666666666657" width="138.66666666666666" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15m-8y-RBw">
+                                                        <rect key="frame" x="0.0" y="81.333333333333343" width="93.333333333333329" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFi-du-GTH">
+                                                        <rect key="frame" x="0.0" y="121.99999999999999" width="72" height="32.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Carbs:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yef-GQ-XKD">
+                                                        <rect key="frame" x="0.0" y="162.66666666666666" width="129" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiber:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87k-kw-7t7">
+                                                        <rect key="frame" x="0.0" y="203.33333333333334" width="61.666666666666664" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugars:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neh-f9-SgI">
+                                                        <rect key="frame" x="0.0" y="243.99999999999997" width="80" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net Carbs:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb4-cw-zk5">
+                                                        <rect key="frame" x="0.0" y="284.66666666666663" width="112.33333333333333" height="32.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbo-hE-f1m">
+                                                        <rect key="frame" x="0.0" y="325.33333333333326" width="84" height="32.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POq-hf-Mdw">
+                                                        <rect key="frame" x="0.0" y="366" width="38.666666666666664" height="32.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QI9-a3-f1o">
+                                                        <rect key="frame" x="0.0" y="406.66666666666663" width="127.66666666666667" height="32.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="FQ6-Iu-Dlx"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yXa-qB-aYH">
+                                                <rect key="frame" x="300" y="0.0" width="40" height="439.33333333333331"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCK-w6-khF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="32.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW5-GH-KTu">
+                                                        <rect key="frame" x="0.0" y="40.666666666666657" width="12" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpv-jQ-rRy">
+                                                        <rect key="frame" x="0.0" y="81.333333333333343" width="12" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-Yr-bQm">
+                                                        <rect key="frame" x="0.0" y="121.99999999999999" width="12" height="32.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3e-U6-1Fd">
+                                                        <rect key="frame" x="0.0" y="162.66666666666666" width="12" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-L6-VBj">
+                                                        <rect key="frame" x="0.0" y="203.33333333333334" width="12" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqp-T7-At0">
+                                                        <rect key="frame" x="0.0" y="243.99999999999997" width="12" height="32.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVO-Eh-b26">
+                                                        <rect key="frame" x="0.0" y="284.66666666666663" width="12" height="32.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yH-KV-FWC">
+                                                        <rect key="frame" x="0.0" y="325.33333333333326" width="12" height="32.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H62-Kr-kU2">
+                                                        <rect key="frame" x="0.0" y="366" width="12" height="32.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-IO-lnL">
+                                                        <rect key="frame" x="0.0" y="406.66666666666663" width="12" height="32.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                        <color key="textColor" name="NutrientsColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="q4A-cq-1iP"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj0-T6-itH">
+                                        <rect key="frame" x="169" y="508" width="12" height="32.666666666666686"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                        <color key="textColor" name="NutrientsColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="edU-Xz-K36" firstAttribute="top" secondItem="jhq-hC-7hM" secondAttribute="top" constant="20" id="9Ud-om-cdW"/>
+                                    <constraint firstItem="edU-Xz-K36" firstAttribute="leading" secondItem="jhq-hC-7hM" secondAttribute="leading" constant="20" id="LE3-wY-gMy"/>
+                                    <constraint firstItem="jhq-hC-7hM" firstAttribute="trailing" secondItem="edU-Xz-K36" secondAttribute="trailing" constant="20" id="rJI-cQ-Lu7"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eZb-fS-Nnf"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="jhq-hC-7hM"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JI2-Sn-GBa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aXt-Mt-OqU" firstAttribute="top" secondItem="3lG-FK-XRG" secondAttribute="bottom" constant="5" id="2hH-20-FZM"/>
+                            <constraint firstItem="JI2-Sn-GBa" firstAttribute="trailing" secondItem="aXt-Mt-OqU" secondAttribute="trailing" constant="5" id="3GA-DZ-TYz"/>
+                            <constraint firstItem="3lG-FK-XRG" firstAttribute="centerX" secondItem="KLW-IJ-oZr" secondAttribute="centerX" id="3u8-tn-GoJ"/>
+                            <constraint firstItem="zpF-Ef-qRK" firstAttribute="centerX" secondItem="KLW-IJ-oZr" secondAttribute="centerX" id="4nb-e0-46D"/>
+                            <constraint firstItem="uzl-VG-383" firstAttribute="top" secondItem="zpF-Ef-qRK" secondAttribute="bottom" constant="5" id="5Yh-eH-TGU"/>
+                            <constraint firstItem="3lG-FK-XRG" firstAttribute="top" secondItem="uzl-VG-383" secondAttribute="bottom" id="A3l-Ln-rfr"/>
+                            <constraint firstItem="Wc0-Jd-48b" firstAttribute="centerX" secondItem="KLW-IJ-oZr" secondAttribute="centerX" id="BHZ-Bo-P3K"/>
+                            <constraint firstItem="aXt-Mt-OqU" firstAttribute="leading" secondItem="JI2-Sn-GBa" secondAttribute="leading" constant="5" id="FhJ-lp-dAp"/>
+                            <constraint firstItem="gfo-P8-FIl" firstAttribute="leading" secondItem="KLW-IJ-oZr" secondAttribute="leading" id="H2A-wY-QUF"/>
+                            <constraint firstItem="JI2-Sn-GBa" firstAttribute="trailing" secondItem="uzl-VG-383" secondAttribute="trailing" constant="20" id="Zcg-Be-R3g"/>
+                            <constraint firstItem="uzl-VG-383" firstAttribute="leading" secondItem="JI2-Sn-GBa" secondAttribute="leading" constant="20" id="gc3-qr-xHZ"/>
+                            <constraint firstAttribute="trailing" secondItem="gfo-P8-FIl" secondAttribute="trailing" id="iZV-f7-PyO"/>
+                            <constraint firstItem="zpF-Ef-qRK" firstAttribute="top" secondItem="JI2-Sn-GBa" secondAttribute="top" id="jM8-9N-Ww8"/>
+                            <constraint firstItem="JI2-Sn-GBa" firstAttribute="bottom" secondItem="aXt-Mt-OqU" secondAttribute="bottom" id="lpu-od-ise"/>
+                            <constraint firstAttribute="bottom" secondItem="gfo-P8-FIl" secondAttribute="bottom" id="veq-jT-y0Z"/>
+                            <constraint firstItem="Wc0-Jd-48b" firstAttribute="centerY" secondItem="KLW-IJ-oZr" secondAttribute="centerY" id="xTt-Ef-77i"/>
+                            <constraint firstItem="gfo-P8-FIl" firstAttribute="top" secondItem="KLW-IJ-oZr" secondAttribute="top" id="zin-Pa-FAm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Wc0-Jd-48b" id="mEA-Lf-iWA"/>
+                        <outlet property="brandLabel" destination="lo3-dz-nPK" id="RGw-iA-PgB"/>
+                        <outlet property="brandValueLabel" destination="wCK-w6-khF" id="sdV-hm-PxG"/>
+                        <outlet property="caloriesLabel" destination="tpv-jQ-rRy" id="KWH-Er-Xq3"/>
+                        <outlet property="categoryImage" destination="gfo-P8-FIl" id="ouQ-Z5-DiH"/>
+                        <outlet property="fatLabel" destination="H62-Kr-kU2" id="5ZX-hl-9O0"/>
+                        <outlet property="fiberLabel" destination="6OU-L6-VBj" id="FGX-gv-DKQ"/>
+                        <outlet property="ingredientsLabel" destination="QI9-a3-f1o" id="ovY-bE-U63"/>
+                        <outlet property="ingredientsValueLabel" destination="Nj0-T6-itH" id="nAw-ZW-1AB"/>
+                        <outlet property="nameLabel" destination="uzl-VG-383" id="xDv-Pn-bus"/>
+                        <outlet property="netCarbsLabel" destination="HVO-Eh-b26" id="QNx-zj-S95"/>
+                        <outlet property="proteinLabel" destination="0yH-KV-FWC" id="FZF-wu-BlX"/>
+                        <outlet property="servingLabel" destination="u23-k6-nfI" id="TPE-4Z-P9I"/>
+                        <outlet property="servingValueLabel" destination="UW5-GH-KTu" id="zID-uj-bqO"/>
+                        <outlet property="sugarsLabel" destination="Tqp-T7-At0" id="vQM-Br-EeR"/>
+                        <outlet property="totalCarbsLabel" destination="v3e-U6-1Fd" id="Xgw-h5-Neg"/>
+                        <outlet property="typeLabel" destination="3lG-FK-XRG" id="tUw-R9-7A0"/>
+                        <outlet property="waterLabel" destination="rJZ-Yr-bQm" id="Z9G-HY-n07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="694-zl-sxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836.92307692307691" y="67.535545023696685"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FactsBackground" width="2791" height="1792"/>
+        <image name="FoodBackground" width="3500" height="3500"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.51800000667572021" green="0.76499998569488525" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="BrandedColor">
+            <color red="0.094999998807907104" green="0.24799999594688416" blue="0.56599998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="FoundationColor">
+            <color red="0.065999999642372131" green="0.33700001239776611" blue="0.020999999716877937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="NameColor">
+            <color red="0.86400002241134644" green="0.30399999022483826" blue="0.84299999475479126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="NutrientsColor">
+            <color red="0.14200000464916229" green="0.414000004529953" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.76499998570000005" green="0.32597396979999999" blue="0.0001470729583" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
