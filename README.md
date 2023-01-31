@@ -1,6 +1,4 @@
 # Nutracker
-
-## Introduction
 Nutracker is an iOS app that allows users to search and view the nutrition facts of different foods from the USDA database. This project was developed during my early stages of learning iOS development and serves as a testament to my growth and development as a programmer.
 
 ## Project Overview
